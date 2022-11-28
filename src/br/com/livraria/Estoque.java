@@ -8,10 +8,6 @@ import java.util.Map;
 
 public class Estoque {
 
-    public Estoque() {
-        estoqueProdutos = new HashMap<>();
-    }
-
     class EntidadeEstoqueProduto {
         TipoProduto tipoProduto;
         Integer idProduto;
@@ -35,7 +31,7 @@ public class Estoque {
         }
     }
 
-    private static HashMap<Integer, EntidadeEstoqueProduto> estoqueProdutos;
+    private static HashMap<Integer, EntidadeEstoqueProduto> estoqueProdutos = new HashMap<>();;
 
     public static Integer getQtdTipoProdutoEmEstoque(TipoProduto tipoProduto) {
         Integer quantidade = 0;

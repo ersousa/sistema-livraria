@@ -60,15 +60,7 @@ public class Livraria {
     }
 
     private String registrarCompraCaixa(Double preco, Integer quantidade) {
-        Double totalCompra = preco * quantidade;
-        if(totalCompra > 200.0){
-            totalCompra *= 0.85;
-            this.caixa.receber(totalCompra);
-            return "Compra efetuada com sucesso!! Você recebeu um desconto de 15%!!!!!!";
-        } else {
-            this.caixa.receber(totalCompra);
-            return "Compra efetuada com sucesso!!";
-        }
+        return this.caixa.registrarCompra(preco, quantidade);
     }
 
     public Caixa getCaixa() {
